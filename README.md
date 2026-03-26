@@ -32,7 +32,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-image = cv2.imread('a.jpeg')
+image = cv2.imread('a.jpg')
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 hist_original = cv2.calcHist([gray_image], [0], None, [256], [0, 256])
 
@@ -69,9 +69,22 @@ plt.show()
 
 <img width="294" height="199" alt="Screenshot 2026-03-26 104756" src="https://github.com/user-attachments/assets/0b61a0f4-d36b-4e21-ade6-25467cc5c3bf" />
 
+
+
+
+
+
 <img width="303" height="207" alt="image" src="https://github.com/user-attachments/assets/18eb3742-7675-40c5-b8dd-90efae5126b5" />
 
+
+
+
+
 <img width="390" height="293" alt="Screenshot 2026-03-26 104813" src="https://github.com/user-attachments/assets/28ed75ae-0a29-47f2-9736-9c66559fc340" />
+
+
+
+
 
 <img width="367" height="290" alt="image" src="https://github.com/user-attachments/assets/1f11c35e-3473-4c43-a8ab-7222c354ab9f" />
 
