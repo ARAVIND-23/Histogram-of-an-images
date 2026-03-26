@@ -25,25 +25,61 @@ The Histogram of gray scale image and color image is shown.
 
 
 ## Program:
+# Developed By: ARAVIND G
+# Register Number: 212223240011
 ```python
-# Developed By: 
-# Register Number: 
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 
+image = cv2.imread('a.jpeg')
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+hist_original = cv2.calcHist([gray_image], [0], None, [256], [0, 256])
 
+equalized_image = cv2.equalizeHist(gray_image)
+hist_equalized = cv2.calcHist([equalized_image], [0], None, [256], [0, 256])
+plt.figure(figsize=(10, 7))
 
+plt.subplot(2, 2, 1)
+plt.imshow(gray_image, cmap='gray')
+plt.title('Original Grayscale Image')
+plt.axis('off')
 
+plt.subplot(2, 2, 2)
+plt.imshow(equalized_image, cmap='gray')
+plt.title('Equalized Image')
+plt.axis('off')
 
+plt.subplot(2, 2, 3)
+plt.plot(hist_original, color='black')
+plt.title('Original Histogram')
+plt.xlim([0, 256])
 
+plt.subplot(2, 2, 4)
+plt.plot(hist_equalized, color='black')
+plt.title('Equalized Histogram')
+plt.xlim([0, 256])
+
+plt.tight_layout()
+plt.show()
 ```
+  
 ## Output:
 ### Input Grayscale Image and Color Image
 
+<img width="294" height="199" alt="Screenshot 2026-03-26 104756" src="https://github.com/user-attachments/assets/0b61a0f4-d36b-4e21-ade6-25467cc5c3bf" />
 
-### Histogram of Grayscale Image and any channel of Color Image
+<img width="303" height="207" alt="image" src="https://github.com/user-attachments/assets/18eb3742-7675-40c5-b8dd-90efae5126b5" />
+
+<img width="390" height="293" alt="Screenshot 2026-03-26 104813" src="https://github.com/user-attachments/assets/28ed75ae-0a29-47f2-9736-9c66559fc340" />
+
+<img width="367" height="290" alt="image" src="https://github.com/user-attachments/assets/1f11c35e-3473-4c43-a8ab-7222c354ab9f" />
 
 
 
-### Histogram Equalization of Grayscale Image.
+
+
+
 
 
 
