@@ -81,7 +81,7 @@ plt.show()
 ### Histogram of Grayscale Image and any channel of Color Image
 
 
-<img width="390" height="293" alt="Screenshot 2026-03-26 104813" src="https://github.com/user-attachments/assets/28ed75ae-0a29-47f2-9736-9c66559fc340" />
+![Uploading image.png…]()
 
 
 
